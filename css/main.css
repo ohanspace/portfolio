@@ -97,6 +97,10 @@ nav {
     text-align: right;
 }
 
+.nav-icons a{
+    margin-left: 40px;
+}
+
 nav a, nav img{
     display: inline-block;
     vertical-align: middle;
@@ -119,9 +123,7 @@ nav img{
     margin-right: 40px;
 }
 
-.nav-icons img{
-    margin-left: 40px;
-}
+
 
 
 /*-------landing--------*/
@@ -184,6 +186,27 @@ nav img{
     left: 0;
     right: 0;
     margin: auto;
+}
+
+.anim-typewriter{
+    border-right: 2px solid blue;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 12.5em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: blue;}
+    to{border-right-color: transparent;}
 }
 
 
@@ -309,6 +332,110 @@ footer .underline{
     margin: 5px auto 0 auto;
 }
 
+
+@media screen and (max-width: 600px){
+    body{
+        padding: 1em;
+        width: 100%;
+    }
+
+
+    h1{
+        font-size: 2em;
+    }
+
+
+    nav{
+        flex-flow: column;
+        align-items: flex-start;
+    }
+    .contact a{
+        margin-bottom: 3px;
+    }
+
+    .nav-icons{
+        text-align: left;
+    }
+    .nav-icons a{
+        margin: 0;
+    }
+    .nav-icons a + a{
+        margin-left: 5px;
+    }
+
+
+    /*landing*/
+
+    .landing{
+        height: auto;
+        margin-top: 1em;
+        position: static;
+    }
+    .landing .wrapper{
+        flex-direction: column;
+        margin-top: 0px;
+    }
+
+    .landing .right{
+        order: 1;
+        text-align: center;
+    }
+
+    .landing .right > img{
+        width: 200px;
+        margin-bottom: 1em;
+    }
+
+    .blog-btn{
+        position: absolute;
+        top: 1em;
+        right: 10px;
+        margin-top: 0px;
+        padding: 0.5em 0.8em;
+        border: 1px solid #027BFF;
+        border-radius: 0.5em;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1em;
+
+    }
+
+    .landing .left{
+        order: 2;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .scroll-icon{
+       display: none;
+    }
+
+
+    /*projects*/
+    .project .links{
+        left: calc(100% - 105px);
+        top: calc( 100% + 10px);
+    }
+
+    .project .links li{
+        display: inline-block;
+        margin: 3px;
+    }
+
+    .project:nth-child(even) .links{
+        right: auto;
+        left: 15px;
+    }
+
+    .project{
+        margin-top: 5em;
+    }
+
+    .project .header{
+        width: 60%;
+    }
+
+}
 
 
 
