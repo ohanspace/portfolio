@@ -267,6 +267,11 @@ nav img{
     color: white;
 }
 
+.project .header a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .project .header .underline{
     margin-top: 10px;
 }
